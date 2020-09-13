@@ -2,38 +2,66 @@
 var f = React.createElement;
 
 
-class HelloWorld extends React.Component {
-    render() {
-        return e(
-            "div",
-            null,
-            "Hello World"
-        );
-    }
-}
-
 class Button extends React.Component {
     render() {
         return f(
             "button",
             null,           
-            "Button"
+            "Refresh"
+        );
+    }
+}
+
+class WindSpeed extends React.Component {
+    render() {
+        return f(
+            "button",
+            null,
+            "Refresh"
+        );
+    }
+}
+class Visibility extends React.Component {
+    render() {
+        return f(
+            "button",
+            null,
+            "Refresh"
+        );
+    }
+}
+class MinTemp extends React.Component {
+    render() {
+        return f(
+            "button",
+            null,
+            "Refresh"
+        );
+    }
+}
+class MaxTemp extends React.Component {
+    render() {
+        return f(
+            "button",
+            null,
+            "Refresh"
         );
     }
 }
 
 
-const containerElement = document.getElementById('content');
-ReactDOM.render(e(HelloWorld), containerElement);
 
 const containerElement2 = document.getElementById('min_temp');
-ReactDOM.render(e(HelloWorld), containerElement2);
+ReactDOM.render(e(MinTemp), containerElement2);
 
 const containerElement3 = document.getElementById('max_temp');
-ReactDOM.render(e(HelloWorld), containerElement3);
+ReactDOM.render(e(MaxTemp), containerElement3);
 
 const containerElement4 = document.getElementById('wind_speed');
-ReactDOM.render(e(HelloWorld), containerElement4);
+ReactDOM.render(e(WindSpeed), containerElement4);
 
 const containerElement5 = document.getElementById('refreshButton');
 ReactDOM.render(f(Button), containerElement5);
+
+const containerElement6 = document.getElementById('visibility');
+ReactDOM.render(e(Visibility), containerElement6);

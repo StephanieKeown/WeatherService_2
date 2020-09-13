@@ -1,18 +1,17 @@
 ﻿@using WeatherService_2.Models
-@Model WeatherService_2.Models.WeatherForecastModel 
+@*@Model WeatherService_2.Models.WeatherForecastModel*@ 
 
 @{
     ViewData["Title"] = "Weather Forecast";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Weather Forecast</h1>
 </div>
 
-<div id="refreshButton"></div>
+<div class="button" id="refreshButton"></div>
 
-<table>
+<table class="myTable">
     <thead>
         <tr>
             <th>Max Temo</th>
