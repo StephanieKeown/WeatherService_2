@@ -39,9 +39,7 @@ namespace StephAuthREact.Controllers
             {
                 ex.ToString();
             }
-            
 
-           
 
             return View(model);
         }

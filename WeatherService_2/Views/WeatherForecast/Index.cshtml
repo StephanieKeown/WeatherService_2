@@ -10,28 +10,31 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+<div id="refreshButton"></div>
+
 <table>
     <thead>
         <tr>
-            <th>Day</th>
+            <th>Max Temo</th>
             <th>Min Temp</th>
-            <th>Max Temp</th>
-            <th>Rainfall</th>
+            <th>Wind Speed</th>
+            <th>Visibility</th>
         </tr>
     </thead>
     <tbody>
+        @foreach (var forecast in Model.consolidated_weather)
+        {
+            <tr>
 
-        <tr>
-            @foreach (var forecast in Model.consolidated_weather)
-            {
-            <td>@Model.max_temp</td>
-            <td>@Model.min_temp</td>
-            <td>@Model.wind_speed</td>
-            <td>@Model.visibility</td>
-            }
-        </tr>
+                <td id="max_temp">@forecast.max_temp</td>
+                <td id="min_temp">@forecast.min_temp</td>
+                <td id="wind_speed">@forecast.wind_speed</td>
+                <td id="visibility">@forecast.visibility</td>
+               
+            </tr>
+        }
 
-    </tbody>
+        </tbody>
 </table>
 
 
