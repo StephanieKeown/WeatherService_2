@@ -1,0 +1,43 @@
+﻿@using WeatherService_2.Models
+@Model WeatherService_2.Models.WeatherForecastModel 
+
+@{
+    ViewData["Title"] = "Weather Forecast";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Min Temp</th>
+            <th>Max Temp</th>
+            <th>Rainfall</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            @foreach (var forecast in Model.consolidated_weather)
+            {
+            <td>@Model.max_temp</td>
+            <td>@Model.min_temp</td>
+            <td>@Model.wind_speed</td>
+            <td>@Model.visibility</td>
+            }
+        </tr>
+
+    </tbody>
+</table>
+
+
+<div id="content"></div>
+
+
+@section Scripts{
+    <script src="~/js/react.js/React.js"></script>
+}
